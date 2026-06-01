@@ -14,7 +14,11 @@ def is_sweltering():
       :returns: True if the temperature is over 90, False otherwise.
     """
     # write your code for this function below this line.
-
+    temperature=int(input("Enter the current temperature in Farenheit"))
+    if temperature > 90:
+        return True
+    else:
+        return False
 
 def is_warm():
     """
@@ -25,7 +29,11 @@ def is_warm():
       :returns: True if the temperature is between 75 and 87, inclusive, False otherwise.
     """
     # write your code for this function below this line.
-
+    temperature=int(input("Enter the current temperature in Farenheit"))
+    if temperature > 74 and temperature <88:
+        return True
+    else:
+        return False
 
 def is_humid():
     """
@@ -36,7 +44,11 @@ def is_humid():
       :returns: True if it is humid today, False otherwise.
     """
     # write your code for this function below this line.
-
+    answer=input("Is it humid?")
+    if answer == "yes":
+        return True
+    elif answer == "no":
+        return False
 
 def is_inclement():
     """
@@ -47,6 +59,11 @@ def is_inclement():
       :returns: True if it is raining, snowing, or sleeting today, False otherwise.
     """
     # write your code for this function below this line.
+    answer=input("What the weather forecast is today?")
+    if answer == "rain" or answer == "snow" or answer == "sleet":
+        return True
+    else:
+        return False
 
 
 def is_typical_new_york_summer():
@@ -60,7 +77,10 @@ def is_typical_new_york_summer():
       :returns: True if the temperature is over 90 and it is humid, False otherwise.
     """
     # write your code for this function below this line.
-
+    if is_sweltering() and is_humid():
+        return True
+    else:
+        return False
 
 def is_cool_and_nice():
     """
@@ -72,3 +92,7 @@ def is_cool_and_nice():
       :returns: True if the weather is cool and nice today, False otherwise.
     """
     # write your code for this function below this line.
+    if is_sweltering() or is_warm() or is_humid() or is_inclement():
+        return False
+    else:
+        return True
